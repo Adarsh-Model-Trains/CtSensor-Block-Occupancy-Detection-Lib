@@ -108,37 +108,56 @@ void loop() {
 }
 ```
 
+![img](/image/Picture1.png)
+
+![img](/image/Picture2.png)
+
+### connection configurations 
+```
+1.connect the Ctsensor block 1st and 2nd output line to the arduino pin 7 and 6 
+2.connect the jumper pin 13 and pin 12 from Arduino to the breadboard for x and y output led
+3.connect the resistor to the both jumper end and other side of the resistor will connect to the Led long leg
+4.short leg of the led will connect to the common gnd line on the breadboard
+8.connect the jumper from Arduino gnd pin to the breadboard common gnd line
+9.upload the below code provided later in this section to the Arduino
+
+```
+
 ### Complete Example
 ```
 
 #include "CtSensor.h"
 
 #define CT_SENSOR_COUNT 5
+#define X_BLOCK_LED 13
+#define Y_BLOCK_LED 12
 
 CtSensor ctSensor;
 
 void setup() {
   Serial.begin(9600);
   ctSensor.initCtSensor(CT_SENSOR_COUNT);
-  ctSensor.setSensorPin(1, 13);
-  ctSensor.setSensorPin(2, 12);
-  ctSensor.setSensorPin(3, 11);
-  ctSensor.setSensorPin(4, 10);
-  ctSensor.setSensorPin(5, 9);
+  ctSensor.setSensorPin(1, 7);
+  ctSensor.setSensorPin(2, 6);
+  pinMode(X_BLOCK_LED, OUTPUT);
+  pinMode(Y_BLOCK_LED, OUTPUT);
 }
 
 void loop() {
-  delay(500);
   Serial.println();
-  ctSensor.displayPins();
-  for (int pinNo = 1; pinNo <= CT_SENSOR_COUNT; pinNo++) {
-    bool state = ctSensor.isSensorActive(pinNo);
-    if (state) {
-      Serial.print("SENSOR PIN NO ");
-      Serial.print(pinNo);
-      Serial.print(" SENSOR PIN STATE ");
-      Serial.println(state);
-    }
+
+  bool xBlockState = ctSensor.isSensorActive(1);
+  if (xBlockState) {
+    digitalWrite(X_BLOCK_LED, HIGH);
+  } else {
+    digitalWrite(X_BLOCK_LED, LOW);
+  }
+
+  bool yBlockState = ctSensor.isSensorActive(2);
+  if (yBlockState) {
+    digitalWrite(Y_BLOCK_LED, HIGH);
+  } else {
+    digitalWrite(Y_BLOCK_LED, LOW);
   }
 }
 

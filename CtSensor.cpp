@@ -33,7 +33,11 @@ void CtSensor::setSensorPin(int sensorNo, int pinNo) {
 
 bool CtSensor:: isSensorActive(int sensorNo) {
   if (sensorNo > -1 && sensorNo <= _sensorsCount) {
-    if (digitalRead(_sensorsPins[sensorNo - 1]) == 0) {
+    int val = digitalRead(_sensorsPins[sensorNo - 1]);
+    if ( val == 0) {
+      Serial.print(sensorNo - 1);
+      Serial.print("  ");
+      Serial.println(val);
       return true;
     } else {
       return false;
