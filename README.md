@@ -108,9 +108,9 @@ void loop() {
 }
 ```
 
-![img](/image/Picture1.png)
+![img](/image/Picture11.png)
 
-![img](/image/Picture2.png)
+![img](/image/Picture22.png)
 
 ### connection configurations 
 ```
