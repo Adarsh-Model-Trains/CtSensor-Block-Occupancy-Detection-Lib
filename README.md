@@ -9,6 +9,8 @@
 ```
 CtSensor-Block-Detection-Lib is for supporing multiple Ct Sensor Based Block together 
  with less complexcity of the programming 
+ this library can work with any type of CT sensor which is capable of detecting small amout of power drawn on dcc system 
+ like NCE BD20, MERG CT2-T etc
  we can set the blocks sensors and their pin on arduino 
  and get the status of the sensors by calling methods for block occupancy decection 
 
