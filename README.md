@@ -77,17 +77,17 @@ void setup() {
 ```
 
 ### use lib method for getting the Ctsensor status 
-* int state = ctSensor.getSensorState(CT_SENSOR_SEQUENCE_NUMBER);
-	* it will return -1 when sequence number is invalid 
-	* it will return 0 if sensor is active 
-	* it will reurn 1 when sensor is inactive 
+* bool state = ctSensor.isSensorActive(CT_SENSOR_SEQUENCE_NUMBER);
+	* it will return false when sequence number is invalid 
+	* it will return true if sensor is active 
+	* it will reurn false when sensor is inactive 
 ```
 void loop() {
   delay(500);
 
      ...............
 
-    int state = ctSensor.getSensorState(CT_SENSOR_SEQUENCE_NUMBER);
+    bool state = ctSensor.isSensorActive(CT_SENSOR_SEQUENCE_NUMBER);
 	...............
 }
 ```
@@ -129,8 +129,8 @@ void loop() {
   Serial.println();
   ctSensor.displayPins();
   for (int pinNo = 1; pinNo <= CT_SENSOR_COUNT; pinNo++) {
-    int state = ctSensor.getSensorState(pinNo);
-    if (state != -1) {
+    bool state = ctSensor.isSensorActive(pinNo);
+    if (state) {
       Serial.print("SENSOR PIN NO ");
       Serial.print(pinNo);
       Serial.print(" SENSOR PIN STATE ");

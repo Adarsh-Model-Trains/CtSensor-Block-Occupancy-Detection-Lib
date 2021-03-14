@@ -31,12 +31,16 @@ void CtSensor::setSensorPin(int sensorNo, int pinNo) {
   }
 }
 
-int CtSensor::getSensorState(int sensorNo) {
+bool CtSensor:: isSensorActive(int sensorNo) {
   if (sensorNo > -1 && sensorNo <= _sensorsCount) {
-    return  digitalRead(_sensorsPins[sensorNo - 1]);
+    if (digitalRead(_sensorsPins[sensorNo - 1]) == 0) {
+      return true;
+    } else {
+      return false;
+    }
   } else {
     Serial.println("Invalid Sensor Number");
-    return -1;
+    return false;
   }
 }
 

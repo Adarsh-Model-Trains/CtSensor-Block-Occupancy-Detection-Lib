@@ -20,8 +20,8 @@ void loop() {
   Serial.println();
   ctSensor.displayPins();
   for (int pinNo = 1; pinNo <= CT_SENSOR_COUNT; pinNo++) {
-    int state = ctSensor.getSensorState(pinNo);
-    if (state != -1) {
+    bool state = ctSensor.isSensorActive(pinNo);
+    if (state) {
       Serial.print("SENSOR PIN NO ");
       Serial.print(pinNo);
       Serial.print(" SENSOR PIN STATE ");

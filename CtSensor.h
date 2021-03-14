@@ -20,7 +20,7 @@ class CtSensor {
 
     void setSensorPin(int sensorNo, int pinNo);
 
-    int getSensorState(int sensorNo);
+    bool isSensorActive(int sensorNo);
 
     void displayPins();
 
