@@ -3,7 +3,7 @@
 ---
 
 
-# <a href="https://github.com/adarshkumarsingh83/CtSensor-Block-Detection-Lib/archive/main.zip"> Library download link </a>
+# <a href="https://github.com/adarshkumarsingh83/CtSensor-Block-Detection-Lib/src/archive/main.zip"> Library download link </a>
 
 ## About the Lib 
 ```
