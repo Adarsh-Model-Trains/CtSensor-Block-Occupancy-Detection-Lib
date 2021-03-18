@@ -16,6 +16,9 @@ CtSensor-Block-Detection-Lib is for supporing multiple Ct Sensor Based Block tog
 
 ```
 
+![img](image/NCE-BD20.png)
+
+![img](image/DT2-T.png)
 
 
 ## Connection Details 
