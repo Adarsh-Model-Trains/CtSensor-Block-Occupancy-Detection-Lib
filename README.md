@@ -1,9 +1,9 @@
-# CtSensor-Block-Detection-Lib
+# CtSensor-Block-Occupancy-Detection-Lib
 
 ---
 
 
-# <a href="https://github.com/adarshkumarsingh83/CtSensor-Block-Detection-Lib/archive/production.zip"> Library download link </a>
+# <a href="https://github.com/adarshkumarsingh83/CtSensor-Block-Occupancy-Detection-Lib/archive/production.zip"> Library download link </a>
 
 ## About the Lib 
 ```
