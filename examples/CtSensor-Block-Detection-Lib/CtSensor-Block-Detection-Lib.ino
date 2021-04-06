@@ -1,7 +1,7 @@
 
 #include "CtSensor.h"
 
-#define CT_SENSOR_COUNT 5
+#define CT_SENSOR_COUNT 2
 #define X_BLOCK_LED 13
 #define Y_BLOCK_LED 12
 
