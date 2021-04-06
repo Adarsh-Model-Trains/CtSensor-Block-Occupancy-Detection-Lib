@@ -123,8 +123,10 @@ void loop() {
 2.connect the jumper pin 13 and pin 12 from Arduino to the breadboard for x and y output led
 3.connect the resistor to the both jumper end and other side of the resistor will connect to the Led long leg
 4.short leg of the led will connect to the common gnd line on the breadboard
-8.connect the jumper from Arduino gnd pin to the breadboard common gnd line
-9.upload the below code provided later in this section to the Arduino
+5.connect the jumper from Arduino gnd pin to the breadboard common gnd line
+6.connect the external +5v power supply to the merg input for vcc and gnd 
+7.connect the common gnd from external power supply to the arduno gnd 
+8.upload the below code provided later in this section to the Arduino
 
 ```
 
