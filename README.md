@@ -5,6 +5,10 @@
 
 # <a href="https://github.com/adarshkumarsingh83/CtSensor-Block-Occupancy-Detection-Lib/archive/production.zip"> Library download link </a>
 
+
+### YOUTUBE LINK  FOR LIBRARY DETAILS AND DEMO EXAMPLES
+[![CT SENSOR FOR BLOCK DETECTION](http://img.youtube.com/vi/Qz4yqrIIGEE/0.jpg)](https://www.youtube.com/watch?v=Qz4yqrIIGEE "CT SENSOR FOR BLOCK DETECTION")
+
 ## About the Lib 
 ```
 CtSensor-Block-Detection-Lib is for supporing multiple Ct Sensor Based Block together 
